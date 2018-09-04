@@ -11,9 +11,14 @@ This repo exists as an acknowledgement that not everyone will want to immediatel
 and that they may wish to make changes to the legacy codebase. I do not expect to make any changes within this
 repo, but it can be forked for further changes.
 
+# 修改说明
+
 因为用了Google.ProtocolBuffers 2.4.1.555，新的Google.ProtoBuf和老版本的SDK差别较大，这个版本不支持.net core，又不想改业务代码，所以只好找到这个源代码修改下。
 
-只是增加了项目文件和解决访问文件。
+只是增加了项目文件和解决访问文件：
+
 ProtocolBuffersLibrary.NETSTANDARD.sln
+
 ProtocolBuffers.NETSTANDARD.csproj
+
 ProtocolBuffers.Serialization.NETSTANDARD.csproj
