@@ -15,7 +15,7 @@
     <FileVersion>3.0.0.0</FileVersion>
     <RepositoryType />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<SignAssembly>true</SignAssembly>
+    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\keys\Google.ProtocolBuffers.snk</AssemblyOriginatorKeyFile>
     <PackageId>Google.ProtocolBuffers.Serialization</PackageId>
     <Product>Google.ProtocolBuffers.Serialization</Product>
@@ -27,10 +27,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <Folder Include="Properties\" />
-  </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs">
+    </Compile>
     <Compile Include="..\ProtocolBuffers\FrameworkPortability.cs">
       <Link>FrameworkPortability.cs</Link>
     </Compile>
