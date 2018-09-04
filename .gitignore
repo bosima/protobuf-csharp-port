@@ -39,3 +39,6 @@ mono/.libs
 mono/*.exe
 mono/*.dll
 .vs
+/src/.vs
+bin
+obj
