@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
+    <Version>3.0.0</Version>
+    <Authors>Google.ProtocolBuffers</Authors>
+    <Company>Google.ProtocolBuffers</Company>
+    <Description>Google.ProtocolBuffers（支持.net 4.0和.net standard 2.0）</Description>
+    <Copyright>Copyright (c) 2018</Copyright>
+    <PackageLicenseUrl />
+    <PackageProjectUrl />
+    <RepositoryUrl />
+    <PackageReleaseNotes>增加对.net standard 2.0的支持。</PackageReleaseNotes>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <FileVersion>3.0.0.0</FileVersion>
+    <RepositoryType />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Google.ProtocolBuffers</PackageId>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\keys\Google.ProtocolBuffers.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

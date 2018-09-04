@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
+    <Version>3.0.0</Version>
+    <Authors>Google.ProtocolBuffers.Serialization</Authors>
+    <Company>Google.ProtocolBuffers.Serialization</Company>
+    <Description>Google.ProtocolBuffers.Serialization（支持.net 4.0和.net standard 2.0）</Description>
+    <Copyright>Copyright (c) 2018</Copyright>
+    <PackageLicenseUrl />
+    <PackageProjectUrl />
+    <RepositoryUrl />
+    <PackageReleaseNotes>增加对.net standard 2.0的支持。</PackageReleaseNotes>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <FileVersion>3.0.0.0</FileVersion>
+    <RepositoryType />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\keys\Google.ProtocolBuffers.snk</AssemblyOriginatorKeyFile>
+    <PackageId>Google.ProtocolBuffers.Serialization</PackageId>
+    <Product>Google.ProtocolBuffers.Serialization</Product>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ProtocolBuffers\FrameworkPortability.cs">
+      <Link>FrameworkPortability.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProtocolBuffers\ProtocolBuffers.NETSTANDARD.csproj">
+      <Project>{6908BDCE-D925-43F3-94AC-A531E6DF2591}</Project>
+      <Name>ProtocolBuffers</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
