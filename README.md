@@ -1,4 +1,4 @@
-This repo was originally exported from http://code.google.com/p/protobuf-csharp-port,
+﻿This repo was originally exported from http://code.google.com/p/protobuf-csharp-port,
 and represents the latest "legacy" version of protobuf-csharp-port.
 
 This project has now been folded into the [main Google Protocol Buffers project](http://github.com/google/protobuf),
@@ -22,3 +22,13 @@ ProtocolBuffersLibrary.NETSTANDARD.sln
 ProtocolBuffers.NETSTANDARD.csproj
 
 ProtocolBuffers.Serialization.NETSTANDARD.csproj
+
+ProtocolBuffers.Test.NETSTANDARD.csproj
+
+如上，编译了Google.ProtocolBuffers和Google.ProtocolBuffers.Serialization，并通过了单元测试。
+
+这个包也发布到了NuGet，可以直接安装，地址：
+
+https://www.nuget.org/packages/Bosima.Google.ProtocolBuffers/
+
+https://www.nuget.org/packages/Bosima.Google.ProtocolBuffers.Serialization/
