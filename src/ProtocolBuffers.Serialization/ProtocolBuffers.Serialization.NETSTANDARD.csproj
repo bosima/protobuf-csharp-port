@@ -1,27 +1,38 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
-    <Version>3.0.0</Version>
-    <Authors>Google.ProtocolBuffers.Serialization</Authors>
-    <Company>Google.ProtocolBuffers.Serialization</Company>
-    <Description>Google.ProtocolBuffers.Serialization（支持.net 4.0和.net standard 2.0）</Description>
+    <TargetFrameworks>netstandard2.0;net45;</TargetFrameworks>
+    <Version>1.0.0</Version>
+    <Authors>Google, bosima</Authors>
+    <Company>Google, bosima</Company>
+    <Description>基于Google.ProtocolBuffers.Serialization 2.4.1.555，改造其同时支持.net 4.5和.net standard 2.0</Description>
     <Copyright>Copyright (c) 2018</Copyright>
-    <PackageLicenseUrl />
-    <PackageProjectUrl />
-    <RepositoryUrl />
+    <PackageLicenseUrl>https://github.com/bosima/protobuf-csharp-port/blob/master/license.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/bosima/protobuf-csharp-port</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bosima/protobuf-csharp-port</RepositoryUrl>
     <PackageReleaseNotes>增加对.net standard 2.0的支持。</PackageReleaseNotes>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <RepositoryType />
+    <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\keys\Google.ProtocolBuffers.snk</AssemblyOriginatorKeyFile>
-    <PackageId>Google.ProtocolBuffers.Serialization</PackageId>
+    <PackageId>Bosima.Google.ProtocolBuffers.Serialization</PackageId>
     <Product>Google.ProtocolBuffers.Serialization</Product>
+    <AssemblyName>Google.ProtocolBuffers.Serialization</AssemblyName>
+    <RootNamespace>Google.ProtocolBuffers.Serialization</RootNamespace>
+    <DelaySign>false</DelaySign>
+    <PackageTags>ProtocolBuffers</PackageTags>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\Google.ProtocolBuffers.Serialization.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
+    <DocumentationFile>bin\Release\net45\Google.ProtocolBuffers.Serialization.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
