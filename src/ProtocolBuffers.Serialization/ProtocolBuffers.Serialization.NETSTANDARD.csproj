@@ -10,7 +10,7 @@
     <PackageLicenseUrl>https://github.com/bosima/protobuf-csharp-port/blob/master/license.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bosima/protobuf-csharp-port</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bosima/protobuf-csharp-port</RepositoryUrl>
-    <PackageReleaseNotes>增加对.net standard 2.0的支持。</PackageReleaseNotes>
+    <PackageReleaseNotes>将对.NET Framework的支持降低为4.0，以兼容更多需要继续支持4.0的老项目。</PackageReleaseNotes>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
     <RepositoryType>git</RepositoryType>
