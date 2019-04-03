@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45;</TargetFrameworks>
-    <Version>1.0.0</Version>
+    <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
+    <Version>1.0.1</Version>
     <Authors>Google, bosima</Authors>
     <Company>Google, bosima</Company>
-    <Description>基于Google.ProtocolBuffers 2.4.1.555，改造其同时支持.net 4.5和.net standard 2.0</Description>
+    <Description>基于Google.ProtocolBuffers 2.4.1.555，改造其同时支持.net 4.0和.net standard 2.0</Description>
     <Copyright>Copyright (c) 2018</Copyright>
     <PackageLicenseUrl>https://github.com/bosima/protobuf-csharp-port/blob/master/license.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bosima/protobuf-csharp-port</PackageProjectUrl>
@@ -24,19 +24,17 @@
     <DelaySign>false</DelaySign>
     <PackageTags>ProtocolBuffers</PackageTags>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard2.0\Google.ProtocolBuffers.xml</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
-    <DocumentationFile>bin\Release\net45\Google.ProtocolBuffers.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net40|AnyCPU'">
+    <DocumentationFile>bin\Release\net40\Google.ProtocolBuffers.xml</DocumentationFile>
   </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Properties\AssemblyInfo.cs">
